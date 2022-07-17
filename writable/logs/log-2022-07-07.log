@@ -1,0 +1,58 @@
+CRITICAL - 2022-07-07 13:20:15 --> syntax error, unexpected ';', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Models\Usuarios_model.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Usuarios_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Usuarios_model')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Usuarios_model')
+ 4 [internal function]: spl_autoload_call('App\\Models\\Usuarios_model')
+ 5 SYSTEMPATH\Config\Factories.php(152): class_exists('App\\Models\\Usuarios_model')
+ 6 SYSTEMPATH\Config\Factories.php(122): CodeIgniter\Config\Factories::locateClass([...], 'App\\Models\\Usuarios_model')
+ 7 SYSTEMPATH\Config\Factories.php(83): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 8 SYSTEMPATH\Common.php(811): CodeIgniter\Config\Factories::models('App\\Models\\Usuarios_model', [...], null)
+ 9 APPPATH\Controllers\Usuarios.php(12): model('App\\Models\\Usuarios_model')
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-07 14:33:02 --> Undefined property: App\Controllers\Usuarios::$input
+in APPPATH\Controllers\Usuarios.php on line 15.
+ 1 APPPATH\Controllers\Usuarios.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Usuarios::$input', 'APPPATH\\Controllers\\Usuarios.php', 15, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-07 17:09:34 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1926.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1891): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Usuarios_model.php(27): CodeIgniter\Database\BaseBuilder->insert([])
+ 3 APPPATH\Controllers\Usuarios.php(36): App\Models\Usuarios_model->set_usuario([])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-07 17:22:04 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1926.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1891): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Usuarios_model.php(26): CodeIgniter\Database\BaseBuilder->insert([])
+ 3 APPPATH\Controllers\Usuarios.php(36): App\Models\Usuarios_model->set_usuario([])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-07 17:28:35 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1926.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1891): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Usuarios_model.php(26): CodeIgniter\Database\BaseBuilder->insert([])
+ 3 APPPATH\Controllers\Usuarios.php(36): App\Models\Usuarios_model->set_usuario([])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-07 17:30:28 --> You must use the "set" method to insert an entry.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1926.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1891): CodeIgniter\Database\BaseBuilder->validateInsert()
+ 2 APPPATH\Models\Usuarios_model.php(26): CodeIgniter\Database\BaseBuilder->insert([])
+ 3 APPPATH\Controllers\Usuarios.php(36): App\Models\Usuarios_model->set_usuario([])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

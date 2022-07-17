@@ -12,9 +12,9 @@ class Home extends BaseController
         .view('templates/footer');
         
     }
-    public function showme()
+    public function phpinfo()
     {
    
-        echo 'SMILIES DE SLA';
+        phpinfo();
     }
 }

@@ -1,0 +1,236 @@
+CRITICAL - 2022-07-16 07:09:52 --> Illegal offset type
+in SYSTEMPATH\Session\Session.php on line 445.
+ 1 SYSTEMPATH\Session\Session.php(445): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset type', 'SYSTEMPATH\\Session\\Session.php', 445, [...])
+ 2 APPPATH\Controllers\Usuarios.php(74): CodeIgniter\Session\Session->set([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->login()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 07:10:25 --> Illegal offset type
+in SYSTEMPATH\Session\Session.php on line 454.
+ 1 SYSTEMPATH\Session\Session.php(454): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset type', 'SYSTEMPATH\\Session\\Session.php', 454, [...])
+ 2 APPPATH\Controllers\Usuarios.php(74): CodeIgniter\Session\Session->set(Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->login()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 07:16:08 --> Illegal offset type
+in SYSTEMPATH\Session\Session.php on line 454.
+ 1 SYSTEMPATH\Session\Session.php(454): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset type', 'SYSTEMPATH\\Session\\Session.php', 454, [...])
+ 2 APPPATH\Controllers\Usuarios.php(75): CodeIgniter\Session\Session->set(Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->login()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:01:44 --> Undefined variable: session
+in APPPATH\Views\home.php on line 3.
+ 1 APPPATH\Views\home.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\home.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('home')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:04:45 --> Undefined variable: session
+in APPPATH\Views\home.php on line 3.
+ 1 APPPATH\Views\home.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\home.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('home')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:07:27 --> Undefined variable: session
+in APPPATH\Views\home.php on line 3.
+ 1 APPPATH\Views\home.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\home.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('home')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:10:02 --> session_start(): A session had already been started - ignoring
+in APPPATH\Controllers\Usuarios.php on line 75.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start(): A session had already been started - ignoring', 'APPPATH\\Controllers\\Usuarios.php', 75, [...])
+ 2 APPPATH\Controllers\Usuarios.php(75): session_start()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->login()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:15:29 --> Undefined variable: session
+in APPPATH\Views\templates\header.php on line 88.
+ 1 APPPATH\Views\templates\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\templates\\header.php', 88, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:16:07 --> Undefined variable: session
+in APPPATH\Views\templates\header.php on line 88.
+ 1 APPPATH\Views\templates\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\templates\\header.php', 88, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:16:15 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\templates\header.php on line 88.
+ 1 APPPATH\Views\templates\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\templates\\header.php', 88, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:19:12 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\templates\header.php on line 89.
+ 1 APPPATH\Views\templates\header.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\templates\\header.php', 89, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 08:19:26 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\templates\header.php on line 89.
+ 1 APPPATH\Views\templates\header.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\templates\\header.php', 89, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 13:51:18 --> Undefined variable: session
+in APPPATH\Views\tienda.php on line 28.
+ 1 APPPATH\Views\tienda.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\tienda.php', 28, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(22): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 13:53:08 --> Undefined variable: session
+in APPPATH\Views\tienda.php on line 28.
+ 1 APPPATH\Views\tienda.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\tienda.php', 28, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(22): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 13:54:08 --> Undefined variable: session
+in APPPATH\Views\templates\header.php on line 40.
+ 1 APPPATH\Views\templates\header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\templates\\header.php', 40, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Productos.php(21): view('templates/header')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 13:55:06 --> Undefined variable: session
+in APPPATH\Views\tienda.php on line 27.
+ 1 APPPATH\Views\tienda.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\tienda.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(22): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 13:57:26 --> Undefined index: username
+in APPPATH\Views\tienda.php on line 27.
+ 1 APPPATH\Views\tienda.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: username', 'APPPATH\\Views\\tienda.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(22): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 13:57:57 --> Undefined index: username
+in APPPATH\Views\tienda.php on line 27.
+ 1 APPPATH\Views\tienda.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: username', 'APPPATH\\Views\\tienda.php', 27, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(23): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 15:07:52 --> Undefined property: CodeIgniter\CodeIgniter::$controller
+in SYSTEMPATH\CodeIgniter.php on line 834.
+ 1 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\CodeIgniter::$controller', 'SYSTEMPATH\\CodeIgniter.php', 834, [])
+ 2 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-16 15:24:19 --> Unknown column 'id_product' in 'field list'
+CRITICAL - 2022-07-16 15:24:20 --> Unknown column 'id_product' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `carrito` (`user_id`, `id_product`, `qty`) VALUES (\'1\', \'1\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `carrito` (`user_id`, `id_product`, `qty`) VALUES (\'1\', \'1\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `carrito` (`user_id`, `id_product`, `qty`) VALUES (\'1\', \'1\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `carrito` (`user_id`, `id_product`, `qty`) VALUES (:user_id:, :id_product:, :qty:)', [...], false)
+ 5 APPPATH\Models\Productos_model.php(27): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Productos.php(51): App\Models\Productos_model->set_product_carrito([...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->add_carrito_ajax()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 15:25:04 --> Undefined index: search
+in APPPATH\Controllers\Productos.php on line 52.
+ 1 APPPATH\Controllers\Productos.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: search', 'APPPATH\\Controllers\\Productos.php', 52, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->add_carrito_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 15:48:12 --> include(/include/modal_add_carrito): failed to open stream: No such file or directory
+in APPPATH\Views\tienda.php on line 60.
+ 1 APPPATH\Views\tienda.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(/include/modal_add_carrito): failed to open stream: No such file or directory', 'APPPATH\\Views\\tienda.php', 60, [...])
+ 2 APPPATH\Views\tienda.php(60): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 6 APPPATH\Controllers\Productos.php(23): view('tienda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-16 15:48:30 --> include(include/modal_add_carrito): failed to open stream: No such file or directory
+in APPPATH\Views\tienda.php on line 60.
+ 1 APPPATH\Views\tienda.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(include/modal_add_carrito): failed to open stream: No such file or directory', 'APPPATH\\Views\\tienda.php', 60, [...])
+ 2 APPPATH\Views\tienda.php(60): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 6 APPPATH\Controllers\Productos.php(23): view('tienda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
