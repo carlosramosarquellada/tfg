@@ -1,0 +1,39 @@
+CRITICAL - 2022-07-17 14:12:43 --> Uncaught CodeIgniter\Exceptions\PageNotFoundException: Can't find a route for 'get: css/theme.css'. in C:\xampp\htdocs\tfg\backoffice\system\Router\Router.php:199
+Stack trace:
+#0 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('css/theme.css')
+#1 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#2 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\tfg\backoffice\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#4 {main}
+  thrown
+in SYSTEMPATH\Router\Router.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 14:12:43 --> Uncaught CodeIgniter\Exceptions\PageNotFoundException: Can't find a route for 'get: js/js-module.js'. in C:\xampp\htdocs\tfg\backoffice\system\Router\Router.php:199
+Stack trace:
+#0 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('js/js-module.js')
+#1 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#2 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\tfg\backoffice\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#4 {main}
+  thrown
+in SYSTEMPATH\Router\Router.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 14:28:04 --> Uncaught CodeIgniter\Exceptions\PageNotFoundException in C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php:952
+Stack trace:
+#0 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(952): CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('')
+#1 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#2 C:\xampp\htdocs\tfg\backoffice\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#3 {main}
+  thrown
+in SYSTEMPATH\CodeIgniter.php on line 952.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 14:34:52 --> Uncaught CodeIgniter\Exceptions\PageNotFoundException: Can't find a route for 'post: /'. in C:\xampp\htdocs\tfg\backoffice\system\Router\Router.php:199
+Stack trace:
+#0 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('/')
+#1 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#2 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\tfg\backoffice\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#4 {main}
+  thrown
+in SYSTEMPATH\Router\Router.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

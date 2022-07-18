@@ -26,6 +26,8 @@ class Usuarios_model extends Model
         $builder= $db->table('usuarios');
         $builder->set($data);
         $builder->insert($data);
+        $id=$db->insertID();
+        return $id;
        
         
     }

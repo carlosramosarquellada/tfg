@@ -1,0 +1,175 @@
+CRITICAL - 2022-07-17 04:53:46 --> Uncaught CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query. in C:\xampp\htdocs\tfg\system\Database\BaseConnection.php:874
+Stack trace:
+#0 C:\xampp\htdocs\tfg\system\Model.php(586): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\tfg\system\Model.php(752): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\tfg\app\Controllers\Productos.php(57): CodeIgniter\Model->__isset('set_product_car...')
+#3 C:\xampp\htdocs\tfg\system\CodeIgniter.php(896): App\Controllers\Productos->add_carrito_ajax()
+#4 C:\xampp\htdocs\tfg\system\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#5 C:\xampp\htdocs\tfg\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\tfg\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#7 {main}
+  thrown
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 04:55:12 --> Uncaught CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query. in C:\xampp\htdocs\tfg\system\Database\BaseConnection.php:874
+Stack trace:
+#0 C:\xampp\htdocs\tfg\system\Model.php(586): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\tfg\system\Model.php(752): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\tfg\app\Controllers\Productos.php(57): CodeIgniter\Model->__isset('set_product_car...')
+#3 C:\xampp\htdocs\tfg\system\CodeIgniter.php(896): App\Controllers\Productos->add_carrito_ajax()
+#4 C:\xampp\htdocs\tfg\system\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#5 C:\xampp\htdocs\tfg\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\tfg\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#7 {main}
+  thrown
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-07-17 05:14:05 --> Unknown column 'product_id' in 'where clause'
+CRITICAL - 2022-07-17 05:14:05 --> Unknown column 'product_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM productos where product_id =1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM productos where product_id =1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM productos where product_id =1')
+ 4 APPPATH\Models\Productos_model.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * FROM productos where product_id =1')
+ 5 APPPATH\Views\carrito.php(18): App\Models\Productos_model->get_product('1')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\carrito.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('carrito', [], true)
+ 9 APPPATH\Controllers\Productos.php(39): view('carrito', [...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->carrito()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 05:25:51 --> Uncaught Error: Unsupported operand types in C:\xampp\htdocs\tfg\app\Controllers\Productos.php:39
+Stack trace:
+#0 C:\xampp\htdocs\tfg\system\CodeIgniter.php(896): App\Controllers\Productos->carrito()
+#1 C:\xampp\htdocs\tfg\system\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#2 C:\xampp\htdocs\tfg\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\tfg\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#4 {main}
+  thrown
+in APPPATH\Controllers\Productos.php on line 39.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 06:10:44 --> Undefined variable: id_product
+in APPPATH\Controllers\Productos.php on line 101.
+ 1 APPPATH\Controllers\Productos.php(101): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_product', 'APPPATH\\Controllers\\Productos.php', 101, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->update_carrito_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 06:10:56 --> Undefined variable: productos
+in APPPATH\Views\tienda.php on line 22.
+ 1 APPPATH\Views\tienda.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: productos', 'APPPATH\\Views\\tienda.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(111): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->update_carrito_ajax()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 06:12:41 --> Undefined variable: productos
+in APPPATH\Views\tienda.php on line 22.
+ 1 APPPATH\Views\tienda.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: productos', 'APPPATH\\Views\\tienda.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(111): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->update_carrito_ajax()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 06:12:41 --> Undefined variable: productos
+in APPPATH\Views\tienda.php on line 22.
+ 1 APPPATH\Views\tienda.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: productos', 'APPPATH\\Views\\tienda.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tienda.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('tienda', [], true)
+ 5 APPPATH\Controllers\Productos.php(111): view('tienda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->update_carrito_ajax()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 07:01:47 --> Invalid argument supplied for foreach()
+in APPPATH\Views\checkout.php on line 14.
+ 1 APPPATH\Views\checkout.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\checkout.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('checkout', [], true)
+ 5 APPPATH\Controllers\Productos.php(70): view('checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 07:14:14 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 70
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(70): view('checkout', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 09:31:51 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 70
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(70): view('checkout', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 09:31:59 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 46
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(46): view('carrito', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 09:45:47 --> Uncaught CodeIgniter\Exceptions\PageNotFoundException: Can't find a route for 'get: form-validation.js'. in C:\xampp\htdocs\tfg\system\Router\Router.php:199
+Stack trace:
+#0 C:\xampp\htdocs\tfg\system\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('form-validation...')
+#1 C:\xampp\htdocs\tfg\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#2 C:\xampp\htdocs\tfg\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\tfg\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#4 {main}
+  thrown
+in SYSTEMPATH\Router\Router.php on line 199.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 09:49:00 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 70
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(70): view('checkout', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 10:24:04 --> Uncaught CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query. in C:\xampp\htdocs\tfg\system\Database\BaseConnection.php:874
+Stack trace:
+#0 C:\xampp\htdocs\tfg\system\Model.php(586): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\tfg\system\Model.php(752): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\tfg\app\Controllers\Usuarios.php(40): CodeIgniter\Model->__isset('set_usuario')
+#3 C:\xampp\htdocs\tfg\system\CodeIgniter.php(896): App\Controllers\Usuarios->registro()
+#4 C:\xampp\htdocs\tfg\system\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#5 C:\xampp\htdocs\tfg\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\tfg\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#7 {main}
+  thrown
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-17 10:27:14 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 70
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(70): view('checkout', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 10:27:40 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 70
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(70): view('checkout', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->checkout()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-17 16:38:00 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\tfg\app\Controllers\Productos.php on line 46
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Productos.php(46): view('carrito', null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->carrito()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -50,6 +50,12 @@ $routes->get('login', 'Usuarios::login');
 $routes->get('logout', 'Usuarios::logout');
 $routes->post('productos/add_carrito_ajax', 'Productos::add_carrito_ajax');
 $routes->get('productos/add_carrito_ajax', 'Productos::add_carrito_ajax');
+$routes->post('productos/update_carrito_ajax', 'Productos::update_carrito_ajax');
+$routes->get('productos/update_carrito_ajax', 'Productos::update_carrito_ajax');
+$routes->get('checkout', 'Productos::checkout');
+$routes->post('checkout', 'Productos::checkout');
+$routes->get('pedido_realizado', 'Productos::pedido_realizado');
+$routes->post('pedido_realizado', 'Productos::pedido_realizado');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

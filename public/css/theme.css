@@ -13,9 +13,17 @@
      font-size: 14px;
      font-weight: 400;
      background: #eff6fa;
-     color: #000000
+     color: #000000;
+     margin:0;
+     padding:0;  
+     display:flex;
+     flex-direction:column;
+     justify-content:space-between;
+     min-height:100vh;
  }
-
+main{
+    flex:1 0 auto;
+}
  div {
      display: block;
      position: relative;
@@ -228,4 +236,40 @@
   }
   .hidden{
     display: none;
+  }
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+
+  .card-registration .select-arrow {
+    top: 13px;
+  }
+
+  .bg-grey {
+    background-color: #eae8e8;
+  }
+
+  @media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+  }
+  .card {
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
   }

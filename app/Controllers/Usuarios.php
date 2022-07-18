@@ -34,8 +34,8 @@ class Usuarios extends BaseController
             'telefono'=>$telefono
 
         ];
-       $model->set_usuario($data_user);
-       $user_id = $model->getInsertID();
+        $user_id =$model->set_usuario($data_user);
+      
         $data_direccion=array(
             'user_id'=>$user_id,
             'nombre'=>$direccion,
