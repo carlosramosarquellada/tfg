@@ -57,6 +57,12 @@ $routes->get('checkout', 'Productos::checkout');
 $routes->post('checkout', 'Productos::checkout');
 $routes->get('pedido_realizado', 'Productos::pedido_realizado');
 $routes->post('pedido_realizado', 'Productos::pedido_realizado');
+$routes->get('productos', 'Productos::productos_list');
+$routes->post('productos', 'Productos::productos_list');
+$routes->get('clientes', 'Usuarios::clientes_list');
+$routes->post('clientes', 'Usuarios::clientes_list');
+$routes->get('productos/add_producto', 'Productos::add_producto');
+$routes->post('productos/add_producto', 'Productos::add_producto');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

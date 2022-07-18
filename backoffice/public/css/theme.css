@@ -273,3 +273,15 @@ main{
     display: inline-block;
     margin: 0 auto;
   }
+  a{
+    text-decoration: none;
+  }
+  header{
+    box-shadow: 0 2px 3px #C8D0D8;
+  }
+  footer{
+    box-shadow: 0 2px 3px #C8D0D8;
+  }
+  .nav-link-black{
+    color: black;
+  }

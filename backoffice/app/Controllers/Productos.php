@@ -47,6 +47,24 @@ class Productos extends BaseController
         .view('templates/footer');  
 
     }
+    public function productos_list()
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            
+            $data=array();
+            $data['productos'] = $model->get_all_products();
+            return view('templates/header')
+            .view('productos_list',$data)
+            .view('templates/footer');  
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+
+    }
     public function checkout()
     {
         $model = model(Productos_model::class);
@@ -196,6 +214,45 @@ class Productos extends BaseController
           ));
 
     
+    }
+    public function add_producto()
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            if($_POST)
+            {
+                $target_dir = "C:/xampp/htdocs/tfg/public/uploads/";
+                $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
+                move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file);
+                $nombre=$_POST['nombre'];
+                $descripcion=$_POST['descripcion'];
+                $categoria=$_POST['categoria'];
+                $precio=$_POST['precio'];
+                $stock=$_POST['stock'];
+                
+                $data=array(
+                    'nombre' => $nombre,
+                    'descripcion' =>$descripcion,
+                    'imagen' =>$_FILES["imagen"]["name"],
+                    'categoria' =>$categoria,
+                    'precio' =>$precio,
+                    'stock' =>$stock
+                );
+               $model-> set_product($data);
+    
+               return redirect()->to(base_url('productos'));
+            }else{
+                return view('templates/header')
+                .view('edit_producto')
+                .view('templates/footer'); 
+            }
+          
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
     }
        
     

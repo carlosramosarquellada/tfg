@@ -22,16 +22,18 @@
         <?php foreach($productos as $producto): ?>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
-
+          <div class="text-center">
+            <img  class=""src="<?php echo ('uploads/'.$producto->imagen) ?>" width="200px" height="200px">
+          </div>
             <div class="card-body">
               <p class="card-text"><?php echo $producto->nombre ?></p>
+              <p class="card-text text-muted"><?php echo $producto->descripcion ?></p>
               <p class="card-text"><?php echo number_format($producto->precio,2,',','.') ?> €</p>
               <?php if($session->has('username')) :?>
               <div class="d-flex justify-content-between align-items-center">
                
                   <button type="button" class="btn btn-sm btn-outline-secondary btn-carrito" id_product="<?php echo $producto->id ?>"><span class="fa fa-shopping-cart"></span> Añadir al carrito</button>
-                  <div  id="container_select_uds_view_<?php echo $producto->id ?>" style="max-width:110px;">
+                  <div style="margin-left:10px" id="container_select_uds_view_<?php echo $producto->id ?>" >
                     <select id="select_qty_view_<?php echo $producto->id ?>" name="select_qty" class="select-uds" data-id="<?php echo $producto->id ?>" data-rowid="" style="top:0px;background-color:#fff;">
                         <option value="1">1 ud</option>
                         <option value="2">2 uds</option>

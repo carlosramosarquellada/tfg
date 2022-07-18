@@ -103,6 +103,13 @@ class Productos_model extends Model
         ->insert($data);  
        
     }
+    public function set_product($data)
+    {
+        $db = db_connect();
+        return $db
+        ->table('productos')
+        ->insert($data);
+    }
 
    
 } 
