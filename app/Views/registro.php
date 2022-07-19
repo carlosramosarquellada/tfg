@@ -5,7 +5,7 @@
       <p class="lead">Complete el siguiente formulario para registrarse como usuario de nuestra tienda. Esperamos que le guste.</p>
     </div>
 
-    <div class="row g-5">
+    <div class="row ">
      
       <div class="col-md-7 col-lg-8" style="margin:auto">
        

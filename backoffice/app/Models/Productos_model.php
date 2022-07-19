@@ -110,6 +110,19 @@ class Productos_model extends Model
         ->table('productos')
         ->insert($data);
     }
+    public function edit_product($data)
+    {
+       
+        $db = \Config\Database::connect();
+        $builder= $db->table('productos');
+        $builder->set($data);
+        $builder->where('id',$data['id']);
+        $builder->update($data);
+        $id=$db->insertID();
+        return $id;
+       
+    }
+
 
    
 } 

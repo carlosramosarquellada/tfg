@@ -4,7 +4,7 @@
   <main>
   <div class="container" style="margin-top: 40px;"> 
     <form method="post" action="<?php echo base_url('pedido_realizado');  ?>" enctype="multipart/form-data" class="needs-validation" novalidate="" >
-    <div class="row g-5">
+    <div class="row ">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">Su pedido</span>

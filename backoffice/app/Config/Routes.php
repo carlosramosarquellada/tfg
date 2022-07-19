@@ -63,6 +63,22 @@ $routes->get('clientes', 'Usuarios::clientes_list');
 $routes->post('clientes', 'Usuarios::clientes_list');
 $routes->get('productos/add_producto', 'Productos::add_producto');
 $routes->post('productos/add_producto', 'Productos::add_producto');
+$routes->get('productos/edit/(:any)', 'Productos::edit_producto/$1');
+$routes->post('productos/edit/(:any)', 'Productos::edit_producto/$1');
+$routes->get('clientes/edit/(:any)', 'Usuarios::edit_cliente/$1');
+$routes->post('clientes/edit/(:any)', 'Usuarios::edit_cliente/$1');
+$routes->get('clientes/direcciones/(:any)', 'Usuarios::direcciones_list/$1');
+$routes->post('clientes/direcciones/(:any)', 'Usuarios::direcciones_list/$1');
+$routes->get('direcciones/edit/(:any)', 'Usuarios::edit_direccion/$1');
+$routes->post('direcciones/edit/(:any)', 'Usuarios::edit_direccion/$1');
+$routes->get('pedidos', 'Usuarios::pedidos_list');
+$routes->post('pedidos', 'Usuarios::pedidos_list');
+$routes->get('pedidos/ver_pedido/(:any)', 'Usuarios::ver_pedido/$1');
+$routes->post('pedidos/ver_pedido/(:any)', 'Usuarios::ver_pedido/$1');
+$routes->get('carrusel', 'Usuarios::carrusel');
+$routes->post('carrusel', 'Usuarios::carrusel');
+$routes->get('carrusel/add_diapositiva', 'Usuarios::add_diapositiva');
+$routes->post('carrusel/add_diapositiva', 'Usuarios::add_diapositiva');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

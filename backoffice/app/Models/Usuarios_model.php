@@ -12,6 +12,18 @@ class Usuarios_model extends Model
         $query=$db->query('SELECT * FROM productos');
         return $query->getResult();
     }
+    public function get_all_users()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM usuarios');
+        return $query->getResult();
+    }
+    public function get_all_pedidos()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM pedidos');
+        return $query->getResult();
+    }
     public function get_searched_products($criterio)
     {
         $db = db_connect();
@@ -73,4 +85,90 @@ class Usuarios_model extends Model
         $query=$db->query("SELECT sum(lineas_pedido.qty) as total,productos.*,sum(lineas_pedido.qty)*productos.precio as dinero FROM lineas_pedido INNER JOIN productos on lineas_pedido.product_id=productos.id   GROUP by productos.id order by total desc LIMIT 5;");
         return $query->getResult();
     }
+    public function edit_cliente($data)
+    {
+       
+        $db = \Config\Database::connect();
+        $builder= $db->table('usuarios');
+        $builder->set($data);
+        $builder->where('id',$data['id']);
+        $builder->update($data);
+        $id=$db->insertID();
+        return $id;
+       
+    }
+    public function get_cliente($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM usuarios where id ='.$id);
+        return $query->getRow();
+    }
+    public function get_direcciones_cliente($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM usuarios_direcciones where user_id ='.$id);
+        return $query->getResult();
+    }
+    public function edit_direccion($data)
+    {
+       
+        $db = \Config\Database::connect();
+        $builder= $db->table('usuarios_direcciones');
+        $builder->set($data);
+        $builder->where('id',$data['id']);
+        $builder->update($data);
+        $id=$db->insertID();
+        return $id;
+       
+    }
+    public function get_direccion($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM usuarios_direcciones where id ='.$id);
+        return $query->getRow();
+    }
+    public function get_pedido($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM pedidos where id ='.$id);
+        return $query->getRow();
+    }
+    public function get_lineas_pedido($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM lineas_pedido where pedido_id ='.$id);
+        return $query->getResult();
+    }
+    public function get_producto($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM productos where id ='.$id);
+        return $query->getRow();
+    }
+    public function get_carrusel()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM carrusel');
+        return $query->getResult();
+    }
+    public function set_carrusel($data)
+    {
+        $db = db_connect();
+        return $db
+        ->table('carrusel')
+        ->insert($data); 
+    }
+    public function edit_carrusel($data)
+    {
+       
+        $db = \Config\Database::connect();
+        $builder= $db->table('carrusel');
+        $builder->set($data);
+        $builder->where('id',$data['id']);
+        $builder->update($data);
+        $id=$db->insertID();
+        return $id;
+       
+    }
+
 } 

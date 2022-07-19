@@ -254,6 +254,48 @@ class Productos extends BaseController
         }
        
     }
+    public function edit_producto($id)
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            if($_POST)
+            {
+                $target_dir = "C:/xampp/htdocs/tfg/public/uploads/";
+                $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
+                move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file);
+                $nombre=$_POST['nombre'];
+                $descripcion=$_POST['descripcion'];
+                $categoria=$_POST['categoria'];
+                $precio=$_POST['precio'];
+                $stock=$_POST['stock'];
+                
+                $data=array(
+                    'id' =>$id,
+                    'nombre' => $nombre,
+                    'descripcion' =>$descripcion,
+                    'imagen' =>$_FILES["imagen"]["name"],
+                    'categoria' =>$categoria,
+                    'precio' =>$precio,
+                    'stock' =>$stock
+                );
+               $model-> edit_product($data);
+    
+               return redirect()->to(base_url('productos'));
+            }else{
+            
+                $data['producto'] = $model->get_product($id);
+                return view('templates/header')
+                .view('edit_producto',$data)
+                .view('templates/footer'); 
+            }
+          
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
        
     
    
