@@ -198,6 +198,8 @@ main{
  }
 .img-carrusel-principal{
     max-width: 1320px;
+    width:1320px;
+    height:500px;
     max-height: 500px;
 }
 .select-uds {
@@ -279,3 +281,8 @@ main{
   footer{
     box-shadow: 0 2px 3px #C8D0D8;
   }
+  .strokeme {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+ 

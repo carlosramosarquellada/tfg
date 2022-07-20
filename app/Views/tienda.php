@@ -21,7 +21,7 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <?php foreach($productos as $producto): ?>
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm col-12">
           <div class="text-center">
             <img  class=""src="<?php echo ('uploads/'.$producto->imagen) ?>" width="200px" height="200px">
           </div>

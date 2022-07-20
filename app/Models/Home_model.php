@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Usuarios_model extends Model
+class Home_model extends Model
 {
     public function get_all_products()
     {
@@ -82,7 +82,7 @@ class Usuarios_model extends Model
     public function get_productos_mas_vendidos()
     {
         $db = db_connect();
-        $query=$db->query("SELECT sum(lineas_pedido.qty) as total,productos.*,sum(lineas_pedido.qty)*productos.precio as dinero FROM lineas_pedido INNER JOIN productos on lineas_pedido.product_id=productos.id   GROUP by productos.id order by total desc LIMIT 5;");
+        $query=$db->query("SELECT sum(lineas_pedido.qty) as total,productos.*,sum(lineas_pedido.qty)*productos.precio as dinero FROM lineas_pedido INNER JOIN productos on lineas_pedido.product_id=productos.id   GROUP by productos.id order by total desc LIMIT 8;");
         return $query->getResult();
     }
     public function edit_cliente($data)
@@ -186,5 +186,7 @@ class Usuarios_model extends Model
         $query=$db->query('SELECT * FROM carrusel where id ='.$id);
         return $query->getRow();
     }
+    
+    
 
 } 

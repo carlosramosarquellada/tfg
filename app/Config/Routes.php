@@ -56,6 +56,8 @@ $routes->get('checkout', 'Productos::checkout');
 $routes->post('checkout', 'Productos::checkout');
 $routes->get('pedido_realizado', 'Productos::pedido_realizado');
 $routes->post('pedido_realizado', 'Productos::pedido_realizado');
+$routes->post('area_clientes/(:any)', 'Usuarios::area_clientes/$1');
+$routes->get('area_clientes/(:any)', 'Usuarios::area_clientes/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -98,5 +98,36 @@ class Usuarios extends BaseController
             return redirect()->to(base_url(''));
     
     }
+    public function area_clientes($id)
+    {
+        $data=array();
+        $model = model(Usuarios_model::class);
+       if($_POST)
+       {
+       
+            $username=$this->request->getPost('username');
+            $password=$this->request->getPost('password');
+            $username=base64_encode($username);
+            $password=base64_encode($password);
+        
+        
+            $verificado=$model->login($username,$password);
+            if($verificado)
+            {
+                $user=$model-> get_usuario_login_pass($username, $password);
+                $session=session();
+                $session->set($user);
+                $_SESSION['user']=$user;
+                return redirect()->to(base_url(''));
+            }else{
+                $data['error_login']=1;
+            }
+      
+       }
+        return view('templates/header')
+        .view('login',$data)
+        .view('templates/footer');
+        
+    }
    
 }

@@ -27,7 +27,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="<?php echo base_url();?>" class="nav-link px-2 text-secondary">Inicio</a></li>
+          <li><a href="<?php echo base_url();?>" class="nav-link px-2 text-white">Inicio</a></li>
           <li><a href="<?php echo base_url('tienda');?>" class="nav-link px-2 text-white">Tienda</a></li>
           
           <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
@@ -47,7 +47,7 @@
     <?php else: ?>
       <?php echo 'Bienvenido, '.$session->get('nombre').'.' ?>
       <a href="<?php echo base_url('carrito');?>" type="button" class="btn btn-outline-light m-2"><span class="fa fa-shopping-cart"></span> Carrito</a>
-      <a href="#"type="button" class="btn btn-outline-light m-2">Área de clientes</a>
+      <a href="<?php echo base_url('area_clientes/'.$session->get('id'));?>" type="button" class="btn btn-outline-light m-2">Área de clientes</a>
       <a href="<?php echo base_url('logout');?>" type="button" class="btn btn-outline-light m-2">Cerrar sesión</a>
       
     <?php endif ?>

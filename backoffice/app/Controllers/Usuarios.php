@@ -314,5 +314,59 @@ class Usuarios extends BaseController
         }
        
     }
+    public function edit_diapositiva($id)
+    {
+        $model = model(Usuarios_model::class);
+        if($_SESSION['admin'])
+        {
+            if($_POST)
+            {
+                $target_dir = "C:/xampp/htdocs/tfg/public/uploads/";
+                $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
+                move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file);
+                $titulo=$_POST['titulo'];
+                $subtitulo=$_POST['subtitulo'];
+                
+                $data=array(
+                    'id'=>$id,
+                    'titulo' => $titulo,
+                    'subtitulo' => $subtitulo,
+                    'imagen' =>$_FILES["imagen"]["name"],
+                    
+                );
+               $model-> edit_carrusel($data);
+    
+               return redirect()->to(base_url('carrusel'));
+            }else{
+                $data['diapositiva'] = $model->get_diapositiva($id);
+                return view('templates/header')
+                .view('edit_diapositiva',$data)
+                .view('templates/footer'); 
+            }
+          
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
+    public function delete_diapositiva($id)
+    {
+        $model = model(Usuarios_model::class);
+        if($_SESSION['admin'])
+        {
+            
+                
+               $model-> delete_carrusel($id);
+    
+               return redirect()->to(base_url('carrusel'));
+          
+          
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
    
 }

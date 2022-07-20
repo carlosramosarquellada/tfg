@@ -79,6 +79,10 @@ $routes->get('carrusel', 'Usuarios::carrusel');
 $routes->post('carrusel', 'Usuarios::carrusel');
 $routes->get('carrusel/add_diapositiva', 'Usuarios::add_diapositiva');
 $routes->post('carrusel/add_diapositiva', 'Usuarios::add_diapositiva');
+$routes->get('carrusel/edit/(:any)', 'Usuarios::edit_diapositiva/$1');
+$routes->post('carrusel/edit/(:any)', 'Usuarios::edit_diapositiva/$1');
+$routes->get('carrusel/delete/(:any)', 'Usuarios::delete_diapositiva/$1');
+$routes->post('carrusel/delete/(:any)', 'Usuarios::delete_diapositiva/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
