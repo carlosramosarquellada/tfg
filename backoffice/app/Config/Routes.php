@@ -83,6 +83,18 @@ $routes->get('carrusel/edit/(:any)', 'Usuarios::edit_diapositiva/$1');
 $routes->post('carrusel/edit/(:any)', 'Usuarios::edit_diapositiva/$1');
 $routes->get('carrusel/delete/(:any)', 'Usuarios::delete_diapositiva/$1');
 $routes->post('carrusel/delete/(:any)', 'Usuarios::delete_diapositiva/$1');
+$routes->get('promociones', 'Productos::promociones_list');
+$routes->post('promociones', 'Productos::promociones_list');
+$routes->get('promociones/add_promocion', 'Productos::add_promocion');
+$routes->post('promociones/add_promocion', 'Productos::add_promocion');
+$routes->get('promociones/eliminar_promocion/(:any)', 'Productos::eliminar_promocion/$1');
+$routes->post('promociones/eliminar_promocion/(:any)', 'Productos::eliminar_promocion/$1');
+$routes->get('transportistas', 'Productos::transportistas_list');
+$routes->post('transportistas', 'Productos::transportistas_list');
+$routes->get('transportistas/add_transportista', 'Productos::add_transportista');
+$routes->post('transportistas/add_transportista', 'Productos::add_transportista');
+$routes->get('transportistas/eliminar_transportista/(:any)', 'Productos::eliminar_transportista/$1');
+$routes->post('transportistas/eliminar_transportista/(:any)', 'Productos::eliminar_transportista/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

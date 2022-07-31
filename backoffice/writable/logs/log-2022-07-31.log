@@ -1,0 +1,73 @@
+ERROR - 2022-07-31 13:51:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 13:51:32 --> Call to a member function getRow() on bool
+in APPPATH\Models\Usuarios_model.php on line 128.
+ 1 APPPATH\Views\pedidos_list.php(43): App\Models\Usuarios_model->get_direccion(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pedidos_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pedidos_list', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(239): view('pedidos_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->pedidos_list()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-31 13:52:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 13:52:48 --> Call to a member function getRow() on bool
+in APPPATH\Models\Usuarios_model.php on line 128.
+ 1 APPPATH\Views\pedidos_list.php(43): App\Models\Usuarios_model->get_direccion(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pedidos_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pedidos_list', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(239): view('pedidos_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->pedidos_list()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-31 13:53:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 13:53:34 --> Call to a member function getRow() on bool
+in APPPATH\Models\Usuarios_model.php on line 128.
+ 1 APPPATH\Views\pedidos_list.php(43): App\Models\Usuarios_model->get_direccion(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pedidos_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pedidos_list', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(239): view('pedidos_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->pedidos_list()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-31 13:56:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 13:56:33 --> Call to a member function getRow() on bool
+in APPPATH\Models\Usuarios_model.php on line 128.
+ 1 APPPATH\Views\pedidos_list.php(43): App\Models\Usuarios_model->get_direccion(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pedidos_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pedidos_list', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(239): view('pedidos_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->pedidos_list()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-31 13:59:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 13:59:53 --> Call to a member function getRow() on bool
+in APPPATH\Models\Usuarios_model.php on line 128.
+ 1 APPPATH\Views\pedidos_list.php(43): App\Models\Usuarios_model->get_direccion(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pedidos_list.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pedidos_list', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(239): view('pedidos_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->pedidos_list()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-31 14:00:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 14:01:13 --> Uncaught Error: Call to a member function getRow() on bool in C:\xampp\htdocs\tfg\backoffice\app\Models\Usuarios_model.php:128
+Stack trace:
+#0 C:\xampp\htdocs\tfg\backoffice\app\Views\pedidos_list.php(43): App\Models\Usuarios_model->get_direccion(NULL)
+#1 C:\xampp\htdocs\tfg\backoffice\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\tfg\backoffice\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\tfg\backoffice\system\Common.php(1135): CodeIgniter\View\View->render('pedidos_list', Array, true)
+#4 C:\xampp\htdocs\tfg\backoffice\app\Controllers\Usuarios.php(239): view('pedidos_list', Array)
+#5 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(896): App\Controllers\Usuarios->pedidos_list()
+#6 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#7 C:\xampp\htdocs\tfg\backoffice\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Ob
+in APPPATH\Models\Usuarios_model.php on line 128.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

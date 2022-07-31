@@ -44,6 +44,7 @@ class Productos_model extends Model
         return $db
         ->table('carrito')
         ->set('qty', 'qty+'.(int)$data['qty'],false)
+        ->set('precio', $data['precio'])
         ->where('user_id', $data['user_id'])
         ->where('product_id', $data['product_id'])
         ->update();
@@ -55,12 +56,19 @@ class Productos_model extends Model
         $query=$db->query("SELECT * FROM carrito WHERE user_id= $id_user");
         return $query->getResult();
     }
+    public function get_item_carrito($id)
+    {
+        $db = db_connect();
+        $query=$db->query("SELECT * FROM carrito WHERE id= $id");
+        return $query->getRow();
+    }
     public function update_item_carrito($data)
     {
         $db = db_connect();
         return $db
         ->table('carrito')
         ->set('qty',$data['qty'],false)
+        ->set('precio', $data['precio'])
         ->where('id', $data['id'])
         ->update();
     }
@@ -103,6 +111,29 @@ class Productos_model extends Model
         ->insert($data);  
        
     }
-
+    public function get_all_promociones()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM promociones');
+        return $query->getResult();
+    }
+    public function get_promocion_producto($product_id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM promociones where product_id = ' . $product_id);
+        return $query->getRow();
+    }
+    public function get_all_transportistas()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM transportistas');
+        return $query->getResult();
+    }
+    public function get_transportista($id)
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM transportistas where id ='.$id);
+        return $query->getRow();
+    }
    
 } 

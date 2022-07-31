@@ -146,6 +146,17 @@ $(document).ready(function()
 
 
     })
+    $(document).delegate('#transportista', 'change', function(){
+        var transportista = $('#transportista :selected');
+        
+        var tasas=transportista.attr('tasas');
+        $('.gastos_envio').html(tasas+'€');
+        var total=$('.total').val();
+        $('.total_con_envio').html(parseFloat(total)+parseFloat(tasas)+'€');
+       
+
+
+    })
    
 
 

@@ -1,0 +1,72 @@
+CRITICAL - 2022-07-20 14:11:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Usuarios.php(127): CodeIgniter\Model->__get('get')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 14:45:16 --> Invalid argument supplied for foreach()
+in APPPATH\Views\area_clientes.php on line 103.
+ 1 APPPATH\Views\area_clientes.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\area_clientes.php', 103, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\area_clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('area_clientes', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(136): view('area_clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 14:45:43 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Usuarios.php(135): CodeIgniter\Model->__call('get_pedidos_cliente', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 16:47:40 --> Uncaught mysqli_sql_exception: Unknown column 'edit_direccion' in 'where clause' in C:\xampp\htdocs\tfg\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tfg\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 C:\xampp\htdocs\tfg\system\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 C:\xampp\htdocs\tfg\system\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 C:\xampp\htdocs\tfg\app\Models\Usuarios_model.php(73): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 C:\xampp\htdocs\tfg\app\Controllers\Usuarios.php(129): App\Models\Usuarios_model->get_cliente('edit_direccion')
+#5 C:\xampp\htdocs\tfg\system\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('edit_direccion', '9')
+#6 C:\xampp\htdocs\tfg\system\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+#7 C:\xampp\
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-20 16:50:41 --> Creating default object from empty value
+in APPPATH\Controllers\Usuarios.php on line 130.
+ 1 APPPATH\Controllers\Usuarios.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Controllers\\Usuarios.php', 130, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 16:52:51 --> Creating default object from empty value
+in APPPATH\Controllers\Usuarios.php on line 167.
+ 1 APPPATH\Controllers\Usuarios.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Controllers\\Usuarios.php', 167, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->edit_direccion('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 16:53:49 --> Creating default object from empty value
+in APPPATH\Controllers\Usuarios.php on line 130.
+ 1 APPPATH\Controllers\Usuarios.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Controllers\\Usuarios.php', 130, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 16:54:44 --> Creating default object from empty value
+in APPPATH\Controllers\Usuarios.php on line 130.
+ 1 APPPATH\Controllers\Usuarios.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Creating default object from empty value', 'APPPATH\\Controllers\\Usuarios.php', 130, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Usuarios->area_clientes('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-20 17:07:29 --> syntax error, unexpected '}'
+in APPPATH\Controllers\Usuarios.php on line 209.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

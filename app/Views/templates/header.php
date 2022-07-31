@@ -33,7 +33,9 @@
           <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
           <li><a href="#" class="nav-link px-2 text-white">Conócenos</a></li>
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <!--
           <input type="search" class="form-control form-control-dark" name="search" placeholder="Buscar..." aria-label="Search">
+        -->
         </form>
         </ul>
 

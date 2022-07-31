@@ -296,6 +296,139 @@ class Productos extends BaseController
         }
        
     }
+    public function promociones_list()
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            
+            $data=array();
+            $data['promociones'] = $model->get_all_promociones();
+            return view('templates/header')
+            .view('promociones_list',$data)
+            .view('templates/footer');  
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+
+    }
+    public function add_promocion()
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            if($_POST)
+            {
+               
+                $nombre=$_POST['nombre'];
+                $tipo=$_POST['tipo'];
+                $product_id=$_POST['product_id'];
+                $unidades_requeridas=$_POST['unidades_requeridas'];
+                $unidades_pagadas=$_POST['unidades_pagadas'];
+                $descuento=$_POST['descuento'];
+                $data=array(
+                    'nombre' => $nombre,
+                   'product_id' => $product_id,
+                   'tipo' => $tipo,
+                   'unidades_requeridas' => $unidades_requeridas,
+                   'unidades_pagadas' => $unidades_pagadas,
+                   'descuento' => $descuento,
+                );
+               $model-> set_promocion($data);
+    
+               return redirect()->to(base_url('promociones'));
+            }else{
+                $data['productos'] = $model->get_all_products();
+                return view('templates/header')
+                .view('edit_promocion',$data)
+                .view('templates/footer'); 
+            }
+          
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
+    public function eliminar_promocion($id)
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+               $model-> delete_promocion($id);
+    
+               return redirect()->to(base_url('promociones'));
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
+    public function transportistas_list()
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            
+            $data=array();
+            $data['transportistas'] = $model->get_all_transportistas();
+            return view('templates/header')
+            .view('transportistas_list',$data)
+            .view('templates/footer');  
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+
+    }
+    public function add_transportista()
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+            if($_POST)
+            {
+               
+                $nombre=$_POST['nombre'];
+                $tasas=$_POST['tasas'];
+                $tiempo_envio=$_POST['tiempo_envio'];
+               
+                $data=array(
+                    'nombre' => $nombre,
+                   'tasas' => $tasas,
+                   'tiempo_envio' => $tiempo_envio,
+                );
+               $model-> set_transportista($data);
+    
+               return redirect()->to(base_url('transportistas'));
+            }else{
+                $data['productos'] = $model->get_all_products();
+                return view('templates/header')
+                .view('edit_transportista',$data)
+                .view('templates/footer'); 
+            }
+          
+           
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
+    public function eliminar_transportista($id)
+    {
+        $model = model(Productos_model::class);
+        if($_SESSION['admin'])
+        {
+               $model-> delete_transportista($id);
+    
+               return redirect()->to(base_url('transportistas'));
+        }else{
+            return redirect()->to(base_url(''));
+        }
+       
+    }
        
     
    

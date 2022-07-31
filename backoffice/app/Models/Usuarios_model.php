@@ -33,7 +33,7 @@ class Usuarios_model extends Model
     }
     public function set_usuario($data)
     {
-        //$db = db_connect();
+       
         $db      = \Config\Database::connect();
         $builder= $db->table('usuarios');
         $builder->set($data);
@@ -185,6 +185,29 @@ class Usuarios_model extends Model
         $db = db_connect();
         $query=$db->query('SELECT * FROM carrusel where id ='.$id);
         return $query->getRow();
+    }
+    public function get_pedidos_filtrados($criterio)
+    {
+        $db = db_connect();
+        $query=$db->query("SELECT * FROM pedidos INNER JOIN usuarios ON pedidos.user_id = usuarios.id
+          INNER JOIN usuarios_direcciones ON pedidos.direccion_id=usuarios_direcciones.id
+        where pedidos.fecha LIKE '%$criterio%'OR pedidos.total LIKE '%$criterio%'
+         OR usuarios.nombre LIKE '%$criterio%' OR usuarios.apellidos LIKE '%$criterio%'
+         OR usuarios_direcciones.nombre LIKE '%$criterio%' OR usuarios_direcciones.codigo_postal LIKE '%$criterio%'
+         OR usuarios_direcciones.ciudad LIKE '%$criterio%' OR usuarios_direcciones.provincia LIKE '%$criterio%'");
+        return $query->getResult();
+    }
+    public function update_pedido($data)
+    {
+       
+        $db = \Config\Database::connect();
+        $builder= $db->table('pedidos');
+        $builder->set($data);
+        $builder->where('id',$data['id']);
+        $builder->update($data);
+        $id=$db->insertID();
+        return $id;
+       
     }
 
 } 

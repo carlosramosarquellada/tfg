@@ -1,0 +1,16 @@
+ERROR - 2022-07-31 12:39:10 --> Email: sendWithMail throwed mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+ERROR - 2022-07-31 12:48:59 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. l25-20020a05600c1d1900b003a33227e49bsm17543745wms.4 - gsmtp
+ERROR - 2022-07-31 12:49:25 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. o12-20020a05600c4fcc00b003a31d200a7dsm12949920wmq.9 - gsmtp
+ERROR - 2022-07-31 12:53:29 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. n18-20020a05600c3b9200b003a31b79dc0esm25635699wms.1 - gsmtp
+ERROR - 2022-07-31 12:57:14 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. p14-20020a05600c358e00b003a32297598csm16994946wmq.43 - gsmtp
+ERROR - 2022-07-31 13:00:10 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. t4-20020adfeb84000000b0021e45afa7b0sm9399904wrn.109 - gsmtp
+ERROR - 2022-07-31 13:02:05 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. r16-20020a5d4950000000b0021e6277bc50sm11483817wrs.36 - gsmtp
+ERROR - 2022-07-31 13:08:46 --> Email: sendWithMail throwed mail(): SMTP server response: 530 5.7.0 Must issue a STARTTLS command first. be4-20020a05600c1e8400b0039c454067ddsm12423313wmb.15 - gsmtp
+ERROR - 2022-07-31 13:51:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-07-31 13:51:02 --> Call to a member function getRow() on bool
+in APPPATH\Models\Productos_model.php on line 136.
+ 1 APPPATH\Controllers\Productos.php(84): App\Models\Productos_model->get_transportista(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Productos->pedido_realizado()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

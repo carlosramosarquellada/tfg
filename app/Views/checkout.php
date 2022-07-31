@@ -19,19 +19,22 @@
               <h6 class="my-0"><?php echo $product->nombre ?></h6>
              
             </div>
-            <span class="text-muted"><?php echo number_format(($product->precio*$item->qty),2,',','.').'€' ?></span>
+            <span class="text-muted"><?php echo number_format(($item->precio*$item->qty),2,',','.').'€' ?></span>
           </li>
          <?php endforeach;?>
+         
          <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0"><?php echo 'Gastos de envío' ?></h6>
              
             </div>
-            <span class="text-muted"><?php echo number_format((5),2,',','.').'€' ?></span>
+            <span class="text-muted gastos_envio"></span>
           </li>
+          
           <li class="list-group-item d-flex justify-content-between">
             <span>TOTAL </span>
-            <strong><?php echo number_format($total + $gastos_envio,2,',','.').'€' ?></strong>
+            <strong class="total_con_envio"><?php echo number_format($total,2,',','.').'€' ?></strong>
+            <input type="hidden" class="total" name="total" value="<?php echo number_format($total,2,',','.').'€' ?>">
           </li>
         </ul>
         <button class="w-100 btn btn-primary btn-lg" type="submit">Tramitar pedido</button>
@@ -117,7 +120,7 @@
               </div>
             </div>
           </div>
-          <h2 class="mb-3">Otras direcciones de envío</h2>
+          <h2 class="mb-3 mt-3">Otras direcciones de envío</h2>
           <select class="form-control" id="otra_direccion" name="id_direccion">
             <?php foreach ($direcciones as $direccion):?>
                 <option value="<?php echo $direccion->id; ?>"
@@ -130,6 +133,22 @@
                 ><?php echo $direccion->nombre.' Nº'.$direccion->numero.', CP '.$direccion->codigo_postal.' '.$direccion->ciudad.' ,'
                     .$direccion->provincia. ' ('.$direccion->pais.')'?> </option>
             <?php endforeach; ?>
+          </select>
+          <h2 class="mb-3 mt-3">Seleccione método de envío</h2>
+          <select class="form-control" id="transportista" name="transportista">
+          <option value="">Seleccione...</option>
+                
+                 
+               
+            <?php foreach ($transportistas as $transportista):?>
+                <option value="<?php echo $transportista->id; ?>"
+                 nombre="<?php echo $transportista->nombre;?>"
+                  tasas="<?php echo number_format($transportista->tasas,2,',','.');?>"
+                  tiempo_envio="<?php echo $transportista->tiempo_envio; ?>"
+                 
+                ><?php echo $transportista->nombre ?> </option>
+            <?php endforeach; ?>
+          </select>
 
 
 

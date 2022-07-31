@@ -104,30 +104,119 @@ class Usuarios extends BaseController
         $model = model(Usuarios_model::class);
        if($_POST)
        {
-       
+            $nombre=$this->request->getPost('nombre');
+            $apellidos=$this->request->getPost('apellidos');
+            $email=$this->request->getPost('email');
+            $telefono=$this->request->getPost('telefono');
             $username=$this->request->getPost('username');
             $password=$this->request->getPost('password');
             $username=base64_encode($username);
             $password=base64_encode($password);
-        
-        
-            $verificado=$model->login($username,$password);
-            if($verificado)
-            {
-                $user=$model-> get_usuario_login_pass($username, $password);
-                $session=session();
-                $session->set($user);
-                $_SESSION['user']=$user;
-                return redirect()->to(base_url(''));
-            }else{
-                $data['error_login']=1;
-            }
-      
+            $data_cliente=array(
+                'id'=>$id,
+                'nombre'=>$nombre,
+                'apellidos'=>$apellidos,
+                'email'=>$email,
+                'telefono'=>$telefono,
+                'username'=>$username,
+                'password'=>$password,
+
+            );
+            $model->edit_cliente($data_cliente);
+
        }
+       $data['id']=$id;
+       $data['cliente']=$model->get_cliente($id);
+       $data['cliente']->username=base64_decode($data['cliente']->username);
+       $data['cliente']->password=base64_decode($data['cliente']->password);
+       $data['direcciones']=$model->get_direcciones_cliente($id);
+       $data['pedidos']=$model->get_pedidos_cliente($id);
         return view('templates/header')
-        .view('login',$data)
+        .view('area_clientes',$data)
         .view('templates/footer');
         
+    }
+    public function edit_direccion($id)
+    {
+        $model = model(Usuarios_model::class);
+        
+            if($_POST)
+            {
+                $data['direccion'] = $model->get_direccion($id);
+                $data['cliente'] = $model->get_cliente($data['direccion']->user_id);
+                $nombre=$_POST['nombre'];
+                $numero=$_POST['numero'];
+                $codigo_postal=$_POST['codigo_postal'];
+                $ciudad=$_POST['ciudad'];
+                $provincia=$_POST['provincia'];
+                $pais=$_POST['pais'];
+                
+                $data_dir=array(
+                    'id' =>$id,
+                    'nombre' => $nombre,
+                    'numero' =>$numero,
+                    'codigo_postal' =>$codigo_postal,
+                    'ciudad' =>$ciudad,
+                    'provincia' =>$provincia,
+                    'pais' =>$pais
+                   
+                );
+               $model-> edit_direccion($data_dir);
+            
+    
+               return redirect()->to(base_url('area_clientes/'.$data['cliente']->id));
+            }else{
+            
+                $data['direccion'] = $model->get_direccion($id);
+                return view('templates/header')
+                .view('edit_direccion',$data)
+                .view('templates/footer'); 
+            }
+          
+           
+       
+       
+    }
+    public function nueva_direccion()
+    {
+        $model = model(Usuarios_model::class);
+        $session=session();
+            if($_POST)
+            {
+                
+                $id_cliente=$_SESSION['id']  ;
+                $nombre=$_POST['nombre'];
+                $numero=$_POST['numero'];
+                $codigo_postal=$_POST['codigo_postal'];
+                $ciudad=$_POST['ciudad'];
+                $provincia=$_POST['provincia'];
+                $pais=$_POST['pais'];
+                
+                $data_dir=array(
+                   'user_id' =>$id_cliente,
+                    'nombre' => $nombre,
+                    'numero' =>$numero,
+                    'codigo_postal' =>$codigo_postal,
+                    'ciudad' =>$ciudad,
+                    'provincia' =>$provincia,
+                    'pais' =>$pais
+                   
+                );
+               $model-> set_usuario_direccion($data_dir);
+            
+    
+               return redirect()->to(base_url('area_clientes/'.$id_cliente));
+            }else{
+            
+               
+                return view('templates/header')
+                .view('edit_direccion')
+                .view('templates/footer'); 
+            }
+          
+           
+       
+       
     }
    
 }

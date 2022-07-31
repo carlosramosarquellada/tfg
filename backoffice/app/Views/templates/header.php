@@ -32,6 +32,8 @@
           
           <li><a href="<?php echo base_url('productos');?>" class="nav-link nav-link-black px-2 ">Productos</a></li>
           <li><a href="<?php echo base_url('pedidos');?>" class="nav-link nav-link-black px-2 ">Pedidos</a></li>
+          <li><a href="<?php echo base_url('promociones');?>" class="nav-link nav-link-black px-2 ">Promociones</a></li>
+          <li><a href="<?php echo base_url('transportistas');?>" class="nav-link nav-link-black px-2 ">Transportistas</a></li>
           <li><a href="<?php echo base_url('carrusel');?>" class="nav-link nav-link-black px-2 ">Carrusel</a></li>
          
         </ul>

@@ -58,6 +58,10 @@ $routes->get('pedido_realizado', 'Productos::pedido_realizado');
 $routes->post('pedido_realizado', 'Productos::pedido_realizado');
 $routes->post('area_clientes/(:any)', 'Usuarios::area_clientes/$1');
 $routes->get('area_clientes/(:any)', 'Usuarios::area_clientes/$1');
+$routes->get('edit_direccion/(:any)', 'Usuarios::edit_direccion/$1');
+$routes->post('edit_direccion/(:any)', 'Usuarios::edit_direccion/$1');
+$routes->post('nueva_direccion', 'Usuarios::nueva_direccion/');
+$routes->get('nueva_direccion', 'Usuarios::nueva_direccion/');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

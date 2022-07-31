@@ -226,7 +226,14 @@ class Usuarios extends BaseController
         {
             
             $data=array();
-            $data['pedidos'] = $model->get_all_pedidos();
+            if($_GET['search'])
+            {
+                $criterio=$_GET['search'];
+                $data['pedidos'] = $model->get_pedidos_filtrados($criterio);
+            }else{
+                $data['pedidos'] = $model->get_all_pedidos();
+            }
+           
            
             return view('templates/header')
             .view('pedidos_list',$data)
@@ -243,6 +250,57 @@ class Usuarios extends BaseController
         $model = model(Usuarios_model::class);
         if($_SESSION['admin'])
         {
+            if($_POST['estado'])
+            {
+                $data_pedido=array(
+                    'id'=>$id,
+                    'estado_pedido'=>$_POST['estado']
+                );
+
+                $model->update_pedido($data_pedido);
+                if($data_pedido['estado_pedido']=='En reparto')
+                {
+                    //EMAIL
+                    $to = 'carlosramosarquellada@gmail.com';
+                    $subject = 'Su pedido está en reparto.';
+                    $message = 'Pronto lo recibirá en la dirección seleccionada.';
+                    
+                    $email = \Config\Services::email();
+                    $email->setTo($to);
+                    $email->setFrom('tfg.carlosramosarquellada@gmail.com');
+                    
+                    $email->setSubject($subject);
+                    $email->setMessage($message);
+                    if (!$email->send()) 
+                    {
+
+                        $data_mail = $email->printDebugger(['headers']);
+                        print_r($data_mail);
+                    }
+                }else if($data_pedido['estado_pedido']=='Entregado'){
+                    //EMAIL
+                    $to = 'carlosramosarquellada@gmail.com';
+                    $subject = 'Su pedido ha sido entregado.';
+                    $message = 'Su pedido se ha entregado con éxito en la dirección seleccionada.';
+                    
+                    $email = \Config\Services::email();
+                    $email->setTo($to);
+                    $email->setFrom('tfg.carlosramosarquellada@gmail.com');
+                    
+                    $email->setSubject($subject);
+                    $email->setMessage($message);
+                    if (!$email->send()) 
+                    {
+
+                        $data_mail = $email->printDebugger(['headers']);
+                        print_r($data_mail);
+                    }
+                }
+                
+            
+                
+            }
+
            
             
                 $data['pedido'] = $model->get_pedido($id);
@@ -355,14 +413,9 @@ class Usuarios extends BaseController
         $model = model(Usuarios_model::class);
         if($_SESSION['admin'])
         {
-            
-                
                $model-> delete_carrusel($id);
     
                return redirect()->to(base_url('carrusel'));
-          
-          
-           
         }else{
             return redirect()->to(base_url(''));
         }

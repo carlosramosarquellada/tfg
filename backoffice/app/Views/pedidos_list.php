@@ -5,7 +5,11 @@
             <h2>Pedidos de la tienda
                
             </h2>
-           
+          <form class="col-2  mb-3 mb-lg-0 me-lg-3">
+            
+          <input type="search" class="form-control form-control-dark" name="search" placeholder="Buscar..." aria-label="Search">
+        
+         </form>
             <div class="table-responsive">
               <table class="table table-striped table-sm">
                 <thead>

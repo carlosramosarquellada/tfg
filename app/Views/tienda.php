@@ -20,15 +20,30 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <?php foreach($productos as $producto): ?>
+       
         <div class="col">
           <div class="card shadow-sm col-12">
           <div class="text-center">
+            <?php foreach($promociones as $promocion): ?>
+              <?php if($promocion->product_id == $producto->id):?>
+                <div class="alert alert-success col-5 text-center" style="position: absolute; padding:0">PROMOCIÓN</div>
+              <?php endif;?>
+          <?php endforeach; ?>
             <img  class=""src="<?php echo ('uploads/'.$producto->imagen) ?>" width="200px" height="200px">
           </div>
             <div class="card-body">
+            
               <p class="card-text"><?php echo $producto->nombre ?></p>
               <p class="card-text text-muted"><?php echo $producto->descripcion ?></p>
-              <p class="card-text"><?php echo number_format($producto->precio,2,',','.') ?> €</p>
+             
+              <p class="card-text"><?php echo number_format($producto->precio,2,',','.') ?> €
+              <?php foreach($promociones as $promocion): ?>
+              <?php if($promocion->product_id == $producto->id && $promocion->tipo=='Descuento'):?>
+                -><span style="color:red;font-size:16px;font-weight:bold"><?php echo number_format($producto->precio*(1-$promocion->descuento/100),2,',','.') ?> €</span></p>
+              <?php endif;?>
+              <?php endforeach; ?> 
+            </p>
+             
               <?php if($session->has('username')) :?>
               <div class="d-flex justify-content-between align-items-center">
                

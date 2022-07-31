@@ -122,6 +122,52 @@ class Productos_model extends Model
         return $id;
        
     }
+    public function get_all_promociones()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM promociones');
+        return $query->getResult();
+    }
+    public function set_promocion($data)
+    {
+        $db = db_connect();
+        return $db
+        ->table('promociones')
+        ->insert($data);
+    }
+    public function delete_promocion($id)
+    {
+       
+        $db = db_connect();
+        return $db
+        ->table('promociones')
+        ->where('id', $id)
+        ->delete();
+       
+    }
+    public function get_all_transportistas()
+    {
+        $db = db_connect();
+        $query=$db->query('SELECT * FROM transportistas');
+        return $query->getResult();
+    }
+    public function set_transportista($data)
+    {
+        $db = db_connect();
+        return $db
+        ->table('transportistas')
+        ->insert($data);
+    }
+    public function delete_transportista($id)
+    {
+       
+        $db = db_connect();
+        return $db
+        ->table('transportistas')
+        ->where('id', $id)
+        ->delete();
+       
+    }
 
 
    
