@@ -256,11 +256,16 @@ class Usuarios extends BaseController
                     'id'=>$id,
                     'estado_pedido'=>$_POST['estado']
                 );
+                
 
                 $model->update_pedido($data_pedido);
+                
+                
+
                 if($data_pedido['estado_pedido']=='En reparto')
                 {
-                    //EMAIL
+                    
+                    //EMAIL REPARTO
                     $to = 'carlosramosarquellada@gmail.com';
                     $subject = 'Su pedido está en reparto.';
                     $message = 'Pronto lo recibirá en la dirección seleccionada.';
@@ -277,6 +282,38 @@ class Usuarios extends BaseController
                         $data_mail = $email->printDebugger(['headers']);
                         print_r($data_mail);
                     }
+                    $url = 'http://localhost/PedidosAPI/pedido/'.$id;
+                    $curl = curl_init($url);
+                    $data = [];
+                    curl_setopt($curl, CURLOPT_POST, 0);
+                    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+                    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+                    $result = curl_exec($curl);
+                    curl_close($curl);
+
+                    $data_pedido=array(
+                        'id'=>$id,
+                        'estado_pedido'=>'Entregado'
+                    );
+                    $model->update_pedido($data_pedido);
+
+                     //EMAIL ENTREGADO
+                     $to = 'carlosramosarquellada@gmail.com';
+                     $subject = 'Su pedido ha sido entregado.';
+                     $message = 'Su pedido se ha entregado con éxito en la dirección seleccionada.';
+                     
+                     $email = \Config\Services::email();
+                     $email->setTo($to);
+                     $email->setFrom('tfg.carlosramosarquellada@gmail.com');
+                     
+                     $email->setSubject($subject);
+                     $email->setMessage($message);
+                     if (!$email->send()) 
+                     {
+ 
+                         $data_mail = $email->printDebugger(['headers']);
+                         print_r($data_mail);
+                     }
                 }else if($data_pedido['estado_pedido']=='Entregado'){
                     //EMAIL
                     $to = 'carlosramosarquellada@gmail.com';
